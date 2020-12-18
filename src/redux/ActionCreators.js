@@ -91,8 +91,8 @@ export const fetchComments = () => (dispatch) => {
             throw error 
         }
     }, error=>{
-        var errormess = new Error(error.message)
-        throw errormess
+        var errMess = new Error(error.message)
+        throw errMess
     })
     .then(response => response.json())
     .then(comments => dispatch(addComments(comments)))
